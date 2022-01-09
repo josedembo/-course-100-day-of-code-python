@@ -12,21 +12,19 @@ nr_numbers = int(input(f"How many numbers would you like?\n"))
 #Eazy Level - Order not randomised:
 #e.g. 4 letter, 2 symbol, 2 number = JduE&!91
 password = ""
-for count in range(1, 4):
-  if count == 1:
-    for element in range(0, nr_letters):
-      caracter = random.choice(letters)
-      if element == 0:
-        caracter = caracter.upper()
-      password += caracter
-  if count == 2:
-    for number in range(0, nr_numbers):
-      caracter = random.choice(numbers)
-      password += caracter
-  if count == 3:
-    for symbol in range(0, nr_symbols):
-      caracter = random.choice(symbols)
-      password += caracter
+for element in range(0, nr_letters):
+  caracter = random.choice(letters)
+  if element == 0:
+    caracter = caracter.upper()
+    password += caracter
+
+for number in range(0, nr_numbers):
+  caracter = random.choice(numbers)
+  password += caracter
+
+for symbol in range(0, nr_symbols):
+  caracter = random.choice(symbols)
+  password += caracter
 
 print(f"Strong password\n{password}")
 
