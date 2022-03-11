@@ -41,3 +41,4 @@ while not end_of_game:
             print("You lose, Game Over")
             end_of_game = True
     print(f"".join(word_sicret))
+
