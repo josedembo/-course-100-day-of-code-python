@@ -13,18 +13,18 @@ nr_numbers = int(input(f"How many numbers would you like?\n"))
 #e.g. 4 letter, 2 symbol, 2 number = JduE&!91
 password = ""
 for element in range(0, nr_letters):
-  caracter = random.choice(letters)
-  if element == 0:
-    caracter = caracter.upper()
-    password += caracter
+    caracter = random.choice(letters)
+    if element == 0:
+        caracter = caracter.upper()
+        password += caracter
 
 for number in range(0, nr_numbers):
-  caracter = random.choice(numbers)
-  password += caracter
+    caracter = random.choice(numbers)
+    password += caracter
 
 for symbol in range(0, nr_symbols):
-  caracter = random.choice(symbols)
-  password += caracter
+    caracter = random.choice(symbols)
+    password += caracter
 
 print(f"Strong password\n{password}")
 
@@ -32,11 +32,11 @@ print(f"Strong password\n{password}")
 #e.g. 4 letter, 2 symbol, 2 number = g^2jk8&P
 hard_password = ""
 
-array_of_caracters = list(password);
+array_of_caracters = list(password)
 
 for leter in password:
-  element = random.choice(array_of_caracters)
-  hard_password += element
-  array_of_caracters.remove(element)
+    element = random.choice(array_of_caracters)
+    hard_password += element
+    array_of_caracters.remove(element)
 
 print(f"Very strong password\n{hard_password}")
